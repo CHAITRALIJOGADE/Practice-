@@ -1,0 +1,22 @@
+Absolute Sum Array Description Write a program to find the absolute sum of all elements present in an array.
+
+
+
+import java.util.Scanner;
+
+public class AbsoluteSumArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int sum = 0;
+
+        for (int i = 0; i < n; i++) {
+            int value = sc.nextInt();
+            sum += Math.abs(value);
+        }
+
+        System.out.print(sum);
+        sc.close();
+    }
+}
