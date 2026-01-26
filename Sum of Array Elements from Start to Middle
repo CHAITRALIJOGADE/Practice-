@@ -1,0 +1,35 @@
+Sum of Array Elements from Start to Middle
+Description
+Calculate and print the sum of elements of the array from the starting to the middle.
+
+
+
+import java.util.Scanner;
+
+public class SumofArrayElementsfromStarttoMiddle {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        SumofArrayElementsfromStarttoMiddle(arr);
+        sc.close();
+    }
+
+    static void SumofArrayElementsfromStarttoMiddle(int[] arr) {
+        int mid = arr.length / 2;
+        int sum = 0;
+
+        for (int i = 0; i < mid; i++) {
+            sum += arr[i];
+        }
+
+        System.out.print(sum);
+    }
+}
