@@ -1,0 +1,21 @@
+Print Odd Number Elements in an Array 
+Description Print odd number elements of the array.
+
+import java.util.Scanner;
+
+public class PrintOddNumberElements {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            int value = sc.nextInt();
+            if (value % 2 != 0) {
+                System.out.print(value + " ");
+            }
+        }
+
+        sc.close();
+    }
+}
