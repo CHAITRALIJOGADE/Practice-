@@ -1,0 +1,30 @@
+Product of Array Elements from Middle Index to End
+Description
+Calculate and print the product of elements of the array from the middle to the end.
+
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+
+        for (int i = 0; i < n; i++){
+            arr[i] = scanner.nextInt();
+        }
+        long result = calculateProduct(arr);
+        System.out.print(result);
+        scanner.close();
+    }
+
+    static long calculateProduct(int[] arr) {
+        int mid = arr.length / 2;
+        int product = 1;
+
+        for (int i = mid; i < arr.length; i++){
+            product *= arr[i]; 
+        }
+       return product;
+    }
+}
